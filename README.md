@@ -34,7 +34,7 @@ Ensure you have the following installed on your system:
 - `bash`
 - `curl`
 - `jq`
-- `nano` (or any other text editor used during the inspection step)
+- `nano` (required by the presentation script for file inspection)
 - `python3` (with `folium` installed: `pip install folium`)
 - `firefox` (or adjust the browser executable in `presentation.sh`)
 
