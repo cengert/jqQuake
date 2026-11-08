@@ -8,6 +8,8 @@
 
 `jqQuake` is a live-demo presentation designed for stage performance and instructional walkthroughs. It demonstrates how to transform raw seismic data from the USGS (U.S. Geological Survey) API into a clean, reduced structure using `jq`, which is then rendered on an interactive map using Python and Folium.
 
+*Background:* This tool and presentation were developed as part of the **System-Oriented Programming** course to concisely demonstrate and present a powerful CLI tool in action.
+
 ### ⚡ Note on Craftsmanship
 > **Built with Vibe-Coding:**  
 > This project was proudly vibe-coded with AI assistance. It was developed to maximize stage impact, clear learning, and smooth terminal vibes—letting the creator focus on storytelling, flow, and concepts while leveraging AI for rapid iteration. The learning effect of tackling tools like `jq` project-based in high speed was a fantastic bonus!
@@ -32,6 +34,7 @@ Ensure you have the following installed on your system:
 - `bash`
 - `curl`
 - `jq`
+- `nano` (or any other text editor used during the inspection step)
 - `python3` (with `folium` installed: `pip install folium`)
 - `firefox` (or adjust the browser executable in `presentation.sh`)
 
