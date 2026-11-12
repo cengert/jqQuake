@@ -162,7 +162,7 @@ press_enter
 echo -e "${GREEN}Step 4.5: Regex Filtering (Case-Insensitive Search)${NC}"
 echo -e "Explanation: The 'test()' function allows regular expression matching."
 echo -e "Here we search for 'Poland' regardless of uppercase/lowercase ('i' flag)."
-echo -e "\n${BLUE}$ jq '.features[] | select(.properties.place | test(\"Poland\"; \"i\")) | {ort: .properties.place, mag: .properties.mag}' earthquake.json${NC}\n"
+echo -e "\n${BLUE}$ 'jq .features[] | select((.properties.place // \"\") | test(\"Poland\"; \"i\")) | {ort: .properties.place, mag: .properties.mag}' earthquake.json'${NC}\n"
 echo -e "${YELLOW}[ Press Enter to run this filter... ]${NC}"
 read
 
