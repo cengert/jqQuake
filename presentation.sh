@@ -133,6 +133,7 @@ press_enter
 echo -e "${GREEN}Step 4.2: Extracting Unique Values${NC}"
 echo -e "Explanation: We collect all event types into an array and pass them through"
 echo -e "the 'unique' function to eliminate duplicates and see what categories exist."
+echo -e "Note: The square brackets [...] wrap the stream into a new JSON array."
 echo -e "\n${BLUE}$ jq '[.features[].properties.type] | unique' earthquake.json${NC}\n"
 echo -e "${YELLOW}[ Press Enter to run this filter... ]${NC}"
 read
@@ -143,6 +144,11 @@ press_enter
 echo -e "${GREEN}Step 4.3: Data Aggregation (Grouping and Counting)${NC}"
 echo -e "Explanation: 'group_by(.)' clusters identical types together, and 'map()'"
 echo -e "transforms each cluster into an aggregated dictionary showing its frequency ('length')."
+echo -e ""
+echo -e "  ${YELLOW}How it works:${NC}"
+echo -e "  1. ${CYAN}Extract:${NC}  [.features[].properties.type] creates a flat list of types."
+echo -e "  2. ${CYAN}Group:${NC}    group_by(.) clusters identical values into sub-lists."
+echo -e "  3. ${CYAN}Map:${NC}      map() creates objects using type: .[0] and count: length."
 echo -e "\n${BLUE}$ jq '[.features[].properties.type] | group_by(.) | map({type: .[0], count: length})' earthquake.json${NC}\n"
 echo -e "${YELLOW}[ Press Enter to run this aggregation... ]${NC}"
 read
